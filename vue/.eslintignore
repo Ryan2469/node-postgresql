@@ -1,0 +1,6 @@
+{
+    "ignorePatterns": [],
+    "rules": {
+        "vue/html-intent" : false,
+    }
+}

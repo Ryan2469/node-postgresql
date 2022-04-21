@@ -1,0 +1,37 @@
+{
+    "parser": "vue-eslint-parser",
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module",
+        "parser": {
+            // Script parser for `<script>`
+           "js": "espree",
+
+            // Script parser for `<script lang="ts">`
+           "ts": "@typescript-eslint/parser",
+
+            // Script parser for vue directives (e.g. `v-if=` or `:attribute=`)
+            // and vue interpolations (e.g. `{{variable}}`).
+            // If not specified, the parser determined by `<script lang ="...">` is used.
+           "<template>": "espree"
+       }
+    },
+
+    "plugins": [
+        "@typescript-eslint"    //eslint-parser에 ts 문법을 확인을 못해서 플러그인 사용
+    ],
+
+    "rules": {
+        "vue/no-unused-components" : "off",
+        // "import/no-duplicates": ["error", {"considerQueryString": true}]
+    }
+
+    // "overrides": [
+    //     {
+    //         "rules": {
+    //           "indent": "off"
+    //         }
+    //       }        
+    // ]
+    
+}
